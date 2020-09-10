@@ -1,0 +1,204 @@
+20:38:46 **** Incremental Build of configuration Debug for project ButtonLeds ****
+make -j4 all 
+arm-none-eabi-size   ButtonLeds.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5064	    132	   1588	   6784	   1a80	ButtonLeds.elf
+Finished building: default.size.stdout
+ 
+20:47:46 **** Incremental Build of configuration Debug for project ButtonLeds ****
+make -j4 all 
+arm-none-eabi-size   ButtonLeds.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5064	    132	   1588	   6784	   1a80	ButtonLeds.elf
+Finished building: default.size.stdout
+ 
+20:48:51 **** Incremental Build of configuration Debug for project ButtonLeds ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F2 -DNUCLEO_F207ZG -DDEBUG -DSTM32F207ZGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ButtonLeds.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/bass/embedded_c/target/ButtonLeds/STM32F207ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ButtonLeds.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ButtonLeds.elf
+ 
+arm-none-eabi-objdump -h -S  ButtonLeds.elf  > "ButtonLeds.list"
+arm-none-eabi-objcopy  -O binary  ButtonLeds.elf  "ButtonLeds.bin"
+arm-none-eabi-size   ButtonLeds.elf 
+   text	   data	    bss	    dec	    hex	filename
+    820	     32	   1568	   2420	    974	ButtonLeds.elf
+Finished building: default.size.stdout
+ 
+Finished building: ButtonLeds.bin
+Finished building: ButtonLeds.list
+ 
+ 
+20:51:30 **** Incremental Build of configuration Debug for project ButtonLeds ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F2 -DNUCLEO_F207ZG -DDEBUG -DSTM32F207ZGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ButtonLeds.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/bass/embedded_c/target/ButtonLeds/STM32F207ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ButtonLeds.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ButtonLeds.elf
+ 
+arm-none-eabi-objdump -h -S  ButtonLeds.elf  > "ButtonLeds.list"
+arm-none-eabi-objcopy  -O binary  ButtonLeds.elf  "ButtonLeds.bin"
+arm-none-eabi-size   ButtonLeds.elf 
+Finished building: ButtonLeds.bin
+   text	   data	    bss	    dec	    hex	filename
+    820	     32	   1568	   2420	    974	ButtonLeds.elf
+Finished building: default.size.stdout
+ 
+ 
+Finished building: ButtonLeds.list
+ 
+20:52:07 **** Incremental Build of configuration Debug for project ButtonLeds ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F2 -DNUCLEO_F207ZG -DDEBUG -DSTM32F207ZGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ButtonLeds.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/bass/embedded_c/target/ButtonLeds/STM32F207ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ButtonLeds.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ButtonLeds.elf
+ 
+arm-none-eabi-objdump -h -S  ButtonLeds.elf  > "ButtonLeds.list"
+arm-none-eabi-objcopy  -O binary  ButtonLeds.elf  "ButtonLeds.bin"
+arm-none-eabi-size   ButtonLeds.elf 
+   text	   data	    bss	    dec	    hex	filename
+    820	     32	   1568	   2420	    974	ButtonLeds.elf
+Finished building: default.size.stdout
+ 
+Finished building: ButtonLeds.bin
+ 
+Finished building: ButtonLeds.list
+ 
+20:53:07 **** Incremental Build of configuration Debug for project ButtonLeds ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F2 -DNUCLEO_F207ZG -DDEBUG -DSTM32F207ZGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ButtonLeds.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/bass/embedded_c/target/ButtonLeds/STM32F207ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ButtonLeds.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ButtonLeds.elf
+ 
+arm-none-eabi-objdump -h -S  ButtonLeds.elf  > "ButtonLeds.list"
+arm-none-eabi-objcopy  -O binary  ButtonLeds.elf  "ButtonLeds.bin"
+arm-none-eabi-size   ButtonLeds.elf 
+   text	   data	    bss	    dec	    hex	filename
+    820	     32	   1568	   2420	    974	ButtonLeds.elf
+Finished building: ButtonLeds.list
+Finished building: default.size.stdout
+Finished building: ButtonLeds.bin
+ 
+ 
+ 
+22:01:04 **** Incremental Build of configuration Debug for project ButtonLeds ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F2 -DNUCLEO_F207ZG -DDEBUG -DSTM32F207ZGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:64:7: warning: unused variable 'flag' [-Wunused-variable]
+  char flag = 0;
+       ^~~~
+../Src/main.c:59:12: warning: unused variable 'interrupt_call' [-Wunused-variable]
+  uint32_t* interrupt_call = (uint32_t*)(0xE000E200);
+            ^~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "ButtonLeds.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/bass/embedded_c/target/ButtonLeds/STM32F207ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ButtonLeds.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ButtonLeds.elf
+ 
+arm-none-eabi-objdump -h -S  ButtonLeds.elf  > "ButtonLeds.list"
+arm-none-eabi-objcopy  -O binary  ButtonLeds.elf  "ButtonLeds.bin"
+arm-none-eabi-size   ButtonLeds.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4836	    108	   1580	   6524	   197c	ButtonLeds.elf
+Finished building: ButtonLeds.bin
+Finished building: default.size.stdout
+ 
+ 
+Finished building: ButtonLeds.list
+ 
+22:01:27 **** Incremental Build of configuration Debug for project ButtonLeds ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F2 -DNUCLEO_F207ZG -DDEBUG -DSTM32F207ZGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:64:7: warning: unused variable 'flag' [-Wunused-variable]
+  char flag = 0;
+       ^~~~
+arm-none-eabi-gcc -o "ButtonLeds.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/bass/embedded_c/target/ButtonLeds/STM32F207ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ButtonLeds.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ButtonLeds.elf
+ 
+arm-none-eabi-objdump -h -S  ButtonLeds.elf  > "ButtonLeds.list"
+arm-none-eabi-objcopy  -O binary  ButtonLeds.elf  "ButtonLeds.bin"
+arm-none-eabi-size   ButtonLeds.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4836	    108	   1580	   6524	   197c	ButtonLeds.elf
+Finished building: default.size.stdout
+ 
+Finished building: ButtonLeds.bin
+ 
+Finished building: ButtonLeds.list
+ 
+22:23:58 **** Incremental Build of configuration Debug for project ButtonLeds ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F2 -DNUCLEO_F207ZG -DDEBUG -DSTM32F207ZGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:72:7: warning: unused variable 'flag' [-Wunused-variable]
+  char flag = 0;
+       ^~~~
+arm-none-eabi-gcc -o "ButtonLeds.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/bass/embedded_c/target/ButtonLeds/STM32F207ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ButtonLeds.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ButtonLeds.elf
+ 
+arm-none-eabi-objdump -h -S  ButtonLeds.elf  > "ButtonLeds.list"
+arm-none-eabi-objcopy  -O binary  ButtonLeds.elf  "ButtonLeds.bin"
+arm-none-eabi-size   ButtonLeds.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4860	    108	   1580	   6548	   1994	ButtonLeds.elf
+Finished building: default.size.stdout
+ 
+Finished building: ButtonLeds.bin
+ 
+Finished building: ButtonLeds.list
+ 
+22:25:04 **** Incremental Build of configuration Debug for project ButtonLeds ****
+make -j4 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F2 -DNUCLEO_F207ZG -DDEBUG -DSTM32F207ZGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:72:7: warning: unused variable 'flag' [-Wunused-variable]
+  char flag = 0;
+       ^~~~
+arm-none-eabi-gcc -o "ButtonLeds.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/bass/embedded_c/target/ButtonLeds/STM32F207ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ButtonLeds.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ButtonLeds.elf
+ 
+arm-none-eabi-objdump -h -S  ButtonLeds.elf  > "ButtonLeds.list"
+arm-none-eabi-objcopy  -O binary  ButtonLeds.elf  "ButtonLeds.bin"
+arm-none-eabi-size   ButtonLeds.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4860	    108	   1580	   6548	   1994	ButtonLeds.elf
+Finished building: default.size.stdout
+ 
+Finished building: ButtonLeds.bin
+ 
+Finished building: ButtonLeds.list
+ 
+22:39:48 **** Clean-only build of configuration Debug for project 002ButtonLeds ****
+make -j4 clean 
+rm -rf *
+ 
+22:39:49 **** Build of configuration Debug for project 002ButtonLeds ****
+make -j4 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f207zgtx.d" -MT"Startup/startup_stm32f207zgtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f207zgtx.o" "../Startup/startup_stm32f207zgtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F2 -DNUCLEO_F207ZG -DDEBUG -DSTM32F207ZGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F2 -DNUCLEO_F207ZG -DDEBUG -DSTM32F207ZGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F2 -DNUCLEO_F207ZG -DDEBUG -DSTM32F207ZGTx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'main':
+../Src/main.c:72:7: warning: unused variable 'flag' [-Wunused-variable]
+  char flag = 0;
+       ^~~~
+arm-none-eabi-gcc -o "002ButtonLeds.elf" @"objects.list"   -mcpu=cortex-m3 -T"/home/bass/embedded_c/target/002ButtonLeds/STM32F207ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="002ButtonLeds.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 002ButtonLeds.elf
+ 
+arm-none-eabi-size   002ButtonLeds.elf 
+arm-none-eabi-objdump -h -S  002ButtonLeds.elf  > "002ButtonLeds.list"
+arm-none-eabi-objcopy  -O binary  002ButtonLeds.elf  "002ButtonLeds.bin"
+   text	   data	    bss	    dec	    hex	filename
+   4860	    108	   1580	   6548	   1994	002ButtonLeds.elf
+Finished building: default.size.stdout
+ 
+Finished building: 002ButtonLeds.bin
+ 
+Finished building: 002ButtonLeds.list
+ 
+22:40:10 **** Incremental Build of configuration Debug for project 002ButtonLeds ****
+make -j4 all 
+arm-none-eabi-size   002ButtonLeds.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4860	    108	   1580	   6548	   1994	002ButtonLeds.elf
+Finished building: default.size.stdout
+ 
