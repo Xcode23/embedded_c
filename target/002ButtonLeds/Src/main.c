@@ -24,59 +24,44 @@
 #include <stdio.h>
 #include <stdint.h>
 
-void EXTI0_IRQHandler(void){
-	printf("Hello!");
-}
-
-void USART3_IRQHandler(void){
-
-}
-
-void WWDG_IRQHandler(void){
-
+void EXTI15_10_IRQHandler(void){
+	//Reset EXTI13 active status
+	uint32_t* exti_pr = (uint32_t*)(0x40013C00 + 0x14);//EXTI_PR
+	*exti_pr |= (1 << 13);
+	//Toggle GPIO Port B 7
+	uint32_t* portB_output = (uint32_t*)(0x40020400 + 0x14);//GPIOB_ODR
+	*portB_output ^= 0x80;
+	for(uint32_t i=0; i<300000; i++);//Delay
 }
 
 int main(void)
 {
-//	//User Button 1 is GPIO Port C 13
-//	//LED2 is GPIO Port B 7
-//	uint32_t* portBC_clock = (uint32_t*)(0x40023800 + 0x30);
-//	//turn on GPIO ports B & C clocks
-//	*portBC_clock |= 0x6;
-//	uint32_t* portB_mode = (uint32_t*)0x40020400;
-//	//clean relevant bits
-//	*portB_mode &= 0xFFFF3FFF;
-//	//set GPIO Port B 7 to in output mode
-//	*portB_mode |= 0x4000;
-//	uint32_t* portC_mode = (uint32_t*)0x40020800;//User Button
-//	//set GPIO Port C 13 to in input mode
-//	*portC_mode &= ~0x0C000000;
-//	uint32_t* portB_output = (uint32_t*)(0x40020400 + 0x14);
-//	//SET GPIO Port B 7
-//	*portB_output |= 0x80;
-//	uint32_t* portC_input = (uint32_t*)(0x40020800 + 0x10);
+	//User Button 1 is GPIO Port C 13
+	//LED2 is GPIO Port B 7
+	//Turn on GPIO ports B & C clocks
+	uint32_t* gpio_clock = (uint32_t*)(0x40023800 + 0x30);//RCC_AHB1ENR
+	*gpio_clock |= 0x6;
+	//Turn on EXTI clock
+	uint32_t* exti_clock = (uint32_t*)(0x40023800 + 0x44);//RCC_APB2ENR
+	*exti_clock |= (1 << 14);
+	//Set GPIO Port B 7 to in output mode
+	uint32_t* portB_mode = (uint32_t*)0x40020400;//GPIOB_MODER
+	//Clean relevant bits
+	*portB_mode &= 0xFFFF3FFF;
+	*portB_mode |= 0x4000;
 
-
-
-//	uint32_t* exti_enable = (uint32_t*)(0x40013C00);
-//	*exti_enable |= 1;
-//	uint32_t* exti_enable2 = (uint32_t*)(0x40013C00 + 0x0C);
-//	*exti_enable2 |= 1;
-	uint32_t* interrupt_enable = (uint32_t*)(0xE000E100);
-	*interrupt_enable |= (1 << 6);
-	uint32_t* interrupt_pending = (uint32_t*)(0xE000E200);
-	*interrupt_pending |= (1 << 6);
-//	uint32_t* pend_exti = (uint32_t*)(0x40013C00 + 0x10);
-//	*pend_exti |= 1;
+	//Configure EXTI13 to read from GPIO Port C
+	uint32_t* syscfg_extic = (uint32_t*)(0x40013800 + 0x14);//SYSCFG_EXTICR4
+	*syscfg_extic |= (1 << 5);
+	//Enable EXTI13 interrupt
+	uint32_t* exti_enable = (uint32_t*)(0x40013C00);//EXTI_IMR
+	*exti_enable |= (1 << 13);
+	//Setting trigger for EXTI13 interrupt
+	uint32_t* exti_trigger = (uint32_t*)(0x40013C00 + 0x0C);//EXTI_FTSR
+	*exti_trigger |= (1 << 13);
+	//Enable NVIC interrupt number 40(EXTI15_10)
+	uint32_t* interrupt_enable = (uint32_t*)(0xE000E100 + 0x4);//NVIC_ISER2 (NVIC_ISER + 4 bytes/+32 bits)
+	*interrupt_enable |= (1 << 8);//set eighth bit for interrupt 40. 32 + 8 = 40
 	/* Loop forever */
-	char flag = 0;
-	while(1){
-//		if((*portC_input & 0x2000)){//read button state
-//			for(uint32_t i; i < 300000; i++);//Delay
-//			if(!flag)*portB_output ^= 0x80;//Toggle GPIO Port B 7
-//			flag = 1;
-//		}else{
-//			flag = 0;
-//		}
-	}
+	while(1);
 }
